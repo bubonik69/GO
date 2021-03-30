@@ -10,9 +10,7 @@ qs=utf8.RuneCountInString(s)
 return qs
 }
 
-
-
-func main() {
+func RuneAndString() {
 	str := "Хай m3y frien8d!"
 	ru := []rune(str)
 	var len int = dz1(str)
@@ -38,3 +36,30 @@ func main() {
 
 	println(extractStr)
 }
+func Slovarik(){
+	// книга - автор
+	book:=map[string]string{"Пелевин": "Ночь ясна",
+		"Tolkien" : "Frodo Baggins",
+		"Пушкин" : "Kolobok cok-cok",
+		"aaa": "bbb"}
+	names:=make([]string,0,len(book))
+	for _, name:=range book{
+		names=append(names,name)
+		fmt.Println(name)
+	}
+	aftors:=make([]string,0,len(book))
+
+	for aftor,_:=range book{
+		aftors=append(aftors,aftor)
+		fmt.Println(aftor)
+	}
+
+	fmt.Println(names)
+	fmt.Println(aftors)
+}
+
+//func main(){
+//	Slovarik()
+//	RuneAndString()
+//}
+
